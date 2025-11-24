@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Andini & Riston</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b1e33;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- HOME SCREEN --- */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8)),
+                url('https://i.ibb.co/9n7W7mH/wedding-bg-navy.jpg');
+    background-size: cover;
+}
+
+#home h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 18px;
+    opacity: .8;
+}
+
+.btn-open {
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: #d4af37;
+    color: #0b1e33;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn-open:hover {
+    background: #f2d675;
+}
+
+/* --- MAIN INVITATION --- */
+#invitation {
+    display: none;
+    padding-bottom: 40px;
+}
+
+/* Section */
+.section {
+    max-width: 550px;
+    margin: 40px auto;
+    background: #132844;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgba(255,255,255,.1);
+    animation: fadeIn .7s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* Foto pengantin elegan */
+.couple-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,.1);
+}
+
+/* Nama mempelai */
+.couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #f2d675;
+    text-align: center;
+}
+
+/* Countdown */
+#countdown {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: #f2d675;
+}
+
+/* Map Box */
+.map-box iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+}
+
+/* Share Button */
+.share-btn {
+    background: #25D366;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    color: white;
+    margin: 20px auto 0;
+    width: 80%;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Music */
+audio {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+</style>
+
+</head>
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+    <h1>Undangan Pernikahan</h1>
+    <p>Andini & Riston</p>
+    <button class="btn-open" onclick="openInvitation()">Buka Undangan</button>
+</div>
+
+<!-- ================= INVITATION ================= -->
+<div id="invitation">
+
+    <!-- Musik -->
+    <div class="section">
+        <audio controls autoplay loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+        </audio>
+    </div>
+
+    <!-- Foto & Nama -->
+    <div class="section">
+        <img class="couple-img" src="https://i.ibb.co/SJdfLCs/couple-illustration.png">
+        <h2 class="couple-name">Andini & Riston</h2>
+        <p style="text-align:center; font-size:14px; opacity:.8;">
+            Dengan memohon rahmat Tuhan Yang Maha Esa, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara sakral pernikahan kami.
+        </p>
+    </div>
+
+    <!-- Countdown -->
+    <div class="section">
+        <h2 style="text-align:center;">Menuju Hari Bahagia</h2>
+        <div id="countdown">Loading...</div>
+    </div>
+
+    <!-- Acara -->
+    <div class="section">
+        <h2 style="text-align:center;">Resepsi Pernikahan</h2>
+        <p style="text-align:center;">Minggu, 7 Desember</p>
+        <p style="text-align:center;">Desa Pasar Sorkam</p>
+    </div>
+
+    <!-- Google Maps (sebelum ucapan terima kasih) -->
+    <div class="section map-box">
+        <h2 style="text-align:center;">Lokasi Acara</h2>
+        <iframe src="https://www.google.com/maps?q=pasar+sorkam&output=embed"></iframe>
+    </div>
+
+    <!-- Share WhatsApp -->
+    <div class="section">
+        <h2 style="text-align:center;">Bagikan Undangan</h2>
+        <a class="share-btn" href="https://wa.me/?text=Assalamu'alaikum%20ini%20undangan%20pernikahan%20Andini%20%26%20Riston%20:%20LINKMU">Bagikan via WhatsApp</a>
+    </div>
+
+    <!-- Terima Kasih -->
+    <div class="section">
+        <h2 style="text-align:center;">Terima Kasih</h2>
+        <p style="text-align:center; font-size:14px; opacity:.8;">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.
+        </p>
+    </div>
+
+</div>
+
+<script>
+function openInvitation() {
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('invitation').style.display = 'block';
+}
+
+/* Countdown */
+let targetDate = new Date("Dec 7, 2025 00:00:00").getTime();
+
+setInterval(function(){
+    let now = new Date().getTime();
+    let diff = targetDate - now;
+
+    let days = Math.floor(diff / (1000*60*60*24));
+    let hours = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
+    let minutes = Math.floor((diff % (1000*60*60))/(1000*60));
+    let seconds = Math.floor((diff % (1000*60))/1000);
+
+    document.getElementById("countdown").innerHTML =
+        days+" Hari : "+hours+" Jam : "+minutes+" Menit : "+seconds+" Detik";
+}, 1000);
+</script>
+
+</body>
+</html>
